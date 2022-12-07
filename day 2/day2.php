@@ -47,16 +47,7 @@ $score1 = 0;
 $score2 = 0;
 
 //Lecture du fichier
-$file = readSpecialFile('day2.txt');
-//Conversion de $file qui est de type Array en une chaîne de type String
-$file = implode(' ', $file);
-//Explode de la chaîne pour avoir un élément de type " X X".
-$parties = explode(PHP_EOL, $file);
-
-//Enlève le premier espace de chaque élément de la liste $parties -> "X X"
-for($i = 1; $i < sizeof($parties); $i++){
-    $parties[$i] = substr($parties[$i], 1);
-}
+$parties = adjustArray(readSpecialFile('day2.txt'));
 
 /**
  * Pour chaque élément, je vérifie les combinaisons de victoires
