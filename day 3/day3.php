@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Réussi : nombre d'étoiles -> 2
+ */
+
 include_once('../utils.php');
 
 $backpack = adjustArray(readSpecialFile('day3.txt'));
